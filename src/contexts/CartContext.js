@@ -28,26 +28,31 @@ const CartProvider = ({ children }) => {
     }
   }, [cart]);
   // add to cart
-  const addToCart = (product, id) => {
+  const addToCart = (product) => {
     const newItem = { ...product, amount: 1 };
     console.log(newItem);
+
     // check if the item is already in the cart
     const cartItem = cart.find((item) => {
-      return item.id === id;
+      return item.id === product.id;
     });
+
     // if cart item is already  in the cart
     if (cartItem) {
       const newCart = [...cart].map((item) => {
-        if (item.id === id) {
+        if (item.id === product.id) {
           return { ...item, amount: cartItem.amount + 1 };
         } else {
           return item;
         }
       });
+
       setCart(newCart);
     } else {
       setCart([...cart, newItem]);
     }
+
+    
   };
   // remove from cart
   const removeFromCart = (id) => {
@@ -86,7 +91,6 @@ const CartProvider = ({ children }) => {
       removeFromCart(id);
     }
   };
-
   return (
     <CartContext.Provider
       value={{

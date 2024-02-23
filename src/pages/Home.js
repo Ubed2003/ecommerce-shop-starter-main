@@ -13,7 +13,7 @@ const Home = () => {
 
   // get only men's nd women clothing category
   const filteredProduct =  products.filter(item =>{
-    return item.category === "men's clothing" || item.category === "women's clothing"                                                                                                                        
+    return item.category.name === "Electronics" || item.category.name === "Electronics"                                                                                                                        
   })
 
   return <> 
