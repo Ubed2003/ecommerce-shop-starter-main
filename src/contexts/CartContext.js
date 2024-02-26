@@ -9,14 +9,14 @@ const CartProvider = ({ children }) => {
   // item amount state
   const [itemAmount, setItemAmount] = useState(0);
   // total  price state
-  const [total] = useState(0);
+  const [total, setTotal] = useState(0);
 
-  // useEffect(() => {
-  //   const total = cart.reduce((accumulator, currentItem) => {
-  //     return accumulator + currentItem.price * currentItem.amount;
-  //   }, 0);
-  //   setTotal(total);
-  // });
+  useEffect(() => {
+    const total = cart.reduce((accumulator, currentItem) => {
+      return accumulator + currentItem.price * currentItem.amount;
+    }, 0);
+    setTotal(total);
+  });
 
   // update item amount
   useEffect(() => {
@@ -28,19 +28,18 @@ const CartProvider = ({ children }) => {
     }
   }, [cart]);
   // add to cart
-  const addToCart = (product) => {
+  const addToCart = (product, id) => {
     const newItem = { ...product, amount: 1 };
-    console.log(newItem);
 
     // check if the item is already in the cart
     const cartItem = cart.find((item) => {
-      return item.id === product.id;
+      return item.id === id;
     });
 
     // if cart item is already  in the cart
     if (cartItem) {
       const newCart = [...cart].map((item) => {
-        if (item.id === product.id) {
+        if (item.id === id) {
           return { ...item, amount: cartItem.amount + 1 };
         } else {
           return item;
@@ -54,10 +53,12 @@ const CartProvider = ({ children }) => {
 
     
   };
+
   // remove from cart
   const removeFromCart = (id) => {
     const newCart = cart.filter((item) => {
-      return item.id !== id;
+      if (item.id !== id)
+      return item.id !== id
     });
     setCart(newCart);
   };
@@ -69,8 +70,8 @@ const CartProvider = ({ children }) => {
 
   // increase amount
   const increaseAmount = (id) => {
-    const cartItem = cart.find((item) => item.id === id);
-    addToCart(cartItem, id);
+    const item = cart.find((item) => item.id === id);
+    addToCart(item, id);
   };
   // decrease amount
   const decreaseAmount = (id) => {
@@ -102,6 +103,7 @@ const CartProvider = ({ children }) => {
         decreaseAmount,
         itemAmount,
         total,
+        setTotal
       }}
     >
       {children}

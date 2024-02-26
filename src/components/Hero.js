@@ -1,5 +1,4 @@
 import React from "react";
-import WomanImg from "../img/woman_hero.png";
 import { Link } from "react-router-dom";
 const Hero = () => {
   return (
@@ -14,15 +13,21 @@ const Hero = () => {
           {/* {title} */}
           <h1 className="text-[70px] leading-[1.1] font-light mb-4">
             AUTUMN SALE STYLISH <br />
-            <span className="font-semibold ">WOMENS</span>
+            <span className="font-semibold ">ELECTRONICS</span>
           </h1>
-          <Link to={"/"} className="self-start uppercase font-semibold border-b-2 border-primary">
-            Discover More 
+          <Link
+            to={"/"}
+            className="self-start uppercase font-semibold border-b-2 border-primary"
+          >
+            Discover More
           </Link>
         </div>
         {/* {image} */}
         <div className="hidden lg:block">
-          <img src={WomanImg} alt="" />
+          <img
+            src="https://images.pexels.com/photos/682933/pexels-photo-682933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt=""
+          />
         </div>
       </div>
     </section>

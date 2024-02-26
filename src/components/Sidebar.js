@@ -19,7 +19,7 @@ const Sidebar = () => {
     <>
       <div
         className={`${
-          isOpen ? "-right-full":   "right-0"       
+          isOpen ? "-right-full" : "right-0"
         }  w-full bg-white fixed top-0 h-full shadow-2xl md:w-[35vw]  transition-all duration-300 z-20 px-4 lg:px-[35px]`}
       >
         <div className="flex items-center justify-between py-6 border-b  ">
@@ -54,14 +54,14 @@ const Sidebar = () => {
           </div>
           <Link
             to="/"
-            className="bg-gray-200 flex p-1 justify-center items-center text-primary w-full font-medium "
+            className="bg-gray-200 flex p-4 justify-center items-center text-primary w-full font-medium "
           >
             {" "}
             View cart
           </Link>
           <Link
             to="/"
-            className="bg-primary  flex p-1 justify-center items-center text-white w-full font-medium "
+            className="bg-primary  flex p-4 justify-center items-center text-white w-full font-medium "
           >
             {" "}
             Checkout

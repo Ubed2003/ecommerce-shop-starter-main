@@ -8,7 +8,7 @@ import { CartContext } from "../contexts/CartContext";
 const Product = ({ product }) => {
   const { addToCart } = useContext(CartContext);
   // destructure product
-  const { id, images, category, title, price } = product;
+  const { id, image, category, title, price } = product;
   return (
     <div>
       <div className="border border-[#e4e4e4] h-[200px] mb-4 relative overflow-hidden group transition bg-cover ">
@@ -17,14 +17,14 @@ const Product = ({ product }) => {
           <div className="mx-auto flex justify center items-center bg-cover">
             <img
               className="max-h-[140px] group-hover:scale-110 transition duration-300 bg-cover"
-              src={images}
+              src={image}
               alt=""
             />
           </div>
         </div>
         {/* {buttons} */}
         <div className="absolute top-6 -right-11 group-hover:right-5 bg-red-500/40 p-2 flex flex-col justify-center items-center gap-y-2 opacity-0 group-hover:opacity-100 transition-all duration-300 ">
-          <button onClick={() => addToCart(product )}>
+          <button onClick={() => addToCart(product, id )}>
             <Link className="flex justify-center items-center text white w-12 h-12 bg-red-500">
               {" "}
               <BsPlus className="text-3xl" />
