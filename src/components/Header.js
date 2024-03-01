@@ -36,7 +36,7 @@ const Header = () => {
       {/* {cart} */}
       <div
         onClick={() => {
-          setIsOpen(!isOpen);
+          setIsOpen(!true);
         }}
         className="cursor-pointer flex relative "
       >
