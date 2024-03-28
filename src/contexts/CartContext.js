@@ -57,7 +57,6 @@ const CartProvider = ({ children }) => {
   // remove from cart
   const removeFromCart = (id) => {
     const newCart = cart.filter((item) => {
-      if (item.id !== id)
       return item.id !== id
     });
     setCart(newCart);
