@@ -26,6 +26,7 @@ const Sidebar = () => {
           <div className="uppercase text-sm font-semibold">
             Shopping bag({itemAmount})
           </div>
+          
           {/* {icon} */}
           <div
             onClick={handleClose}
@@ -34,12 +35,14 @@ const Sidebar = () => {
             <FaLongArrowAltRight className="text-2xl" />
           </div>
         </div>
+        
         <div className="flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto  overflow-x-hidden border-b      ">
           {cart.map((item) => {
             return <CartItem item={item} key={item.id} />;
           })}
-        </div>
-        <div className=" flex flex-col gap-y-3 py-4 mt-4  ">
+         
+        
+        <div className=" flex flex-col gap-y-3 py-4 mt-4 fixed bottom-0 bg-white w-96 ">
           <div className=" flex w-full justify-between items-center  ">
             {/* {total} */}
             <div className="uppercase font-semibold ">
@@ -71,6 +74,9 @@ const Sidebar = () => {
           </Link>
         </div>
         </div>
+                </div>
+
+     
 
     </>
   );
