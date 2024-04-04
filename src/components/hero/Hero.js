@@ -13,35 +13,19 @@ const Hero = () => {
     "https://images.pexels.com/photos/51383/photo-camera-subject-photographer-51383.jpeg"
 ,
   ];
-  const prevSlide = () =>{
-    setCurrentSlide(currenSlide === 0 ? 2 : (prev) => prev - 1)
-  }
-  const nextSlide = () =>{
-    setCurrentSlide(currenSlide === 2 ? 0 : (prev) => prev + 1)
 
-  }
+  
   return (
 
 
     <section className= ''>
       <div className='relative w-screen ' >
-      <div className=" slider  m-0 p-0  m-0 p-0  duration-500 transition-all w-screen  "style={{transform:`translateX(-${currenSlide * 100}vw) `}}>
+      <div className=" slider  m-0 p-0  m-0 p-0  duration-500 transition-all w-screen  ">
         <img className="w-screen  object-cover " src={data[0]} alt="" />
    
        
         </div>
-        <div className="icons absolute w-[100px] m-auto right-0 left-0 flex bottom-[10px] gap-3  ">
-          <div >
-          <FaArrowLeft className="icon w-[50px] h-[50px] rounded-sm border-white divide-solid border-2 "onClick={prevSlide}/>
-
-          </div>
-          <div   >
-          <FaArrowRight className="icon w-[50px] h-[50px] rounded-sm border-white divide-solid border-2"onClick={nextSlide} />
-
-        
-
-        </div>
-      </div>
+      
       </div>
     </section>
   );
