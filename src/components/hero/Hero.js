@@ -26,8 +26,8 @@ const Hero = () => {
       <div className='relative section h-screen w-screen ' >
       <div className=" slider flex m-0 p-0 h-full m-0 p-0  duration-500 transition-all w-screen  "style={{transform:`translateX(-${currenSlide * 100}vw) `}}>
         <img className="w-screen   h-full" src={data[0]} alt="" />
-        <img className="w-screen  h-full object-cover " src={data[1 ]} alt="" />
-        <img className="w-screen    h-full object-cover " src={data[2]} alt="" />
+        <img className="w-screen  h-full  " src={data[1 ]} alt="" />
+        <img className="w-screen    h-full  " src={data[2]} alt="" />
        
         </div>
         <div className="icons absolute w-[100px] m-auto right-0 left-0 flex bottom-[10px] gap-3  ">
