@@ -22,7 +22,7 @@ const Home = () => {
        {products.length > 0 ?
        products.map(product =><Product product={product} key={product.id}/>)
        :
-       <div className="font-gray-200 font-bold text-2xl"> Please Search </div>
+       <div className="font-gray-200 font-bold text-2xl"> Please Wait... </div>
 
         }
       </div>
