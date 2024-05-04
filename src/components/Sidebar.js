@@ -20,7 +20,7 @@ const Sidebar = () => {
       <div
         className={`${
           isOpen ? "-right-full" : "right-0"
-        } w-full bg-white fixed top-0 h-full shadow-2xl md: max-w-[35vw]  xl:max-w-[30vw]  transition-all duration-300 z-20 px-4 `}
+        } w-full bg-white fixed top-0 h-full shadow-2xl sm : max-w-[45vw] md: max-w-[45vw]  xl:max-w-[45vw]  transition-all duration-300 z-20 px-4 `}
       >
         <div className="flex items-center justify-between py-6 border-b  ">
           <div className="uppercase text-sm font-semibold">
@@ -36,14 +36,15 @@ const Sidebar = () => {
           </div>
         </div>
         
-        <div className="flex flex-col gap-y-2 h-[520px] lg:h-[640px] overflow-y-auto  overflow-x-hidden border-b      ">
+        <div className=" flex flex-col gap-y-2 h-[300px] overflow-x-hidden      ">
           {cart.map((item) => {
             return <CartItem item={item} key={item.id} />;
           })}
+                  </div>
          
         
-        <div className=" flex flex-col gap-y-3 py-4 mt-4 fixed bottom-0 bg-white w-96 ">
-          <div className=" flex w-full justify-between items-center  ">
+        <div className=" flex flex-col gap-y-3 py-4 mt-4  bottom-0  ">
+          <div className=" flex w-full justify-between   ">
             {/* {total} */}
             <div className="uppercase font-semibold ">
               <span className="mr-2">Total:</span>$
@@ -74,7 +75,7 @@ const Sidebar = () => {
           </Link>
         </div>
         </div>
-                </div>
+        
 
      
 

@@ -19,8 +19,8 @@ const CartItem = ({ item }) => {
   // destructure item
   const { id, images,category, title, price, amount } = item;
   return (
-    <div className="flex gap-x-4 py-2 lg:px-6 boredr-b-gray-200 w-full font-light  text-gray-500  ">
-      <div className="w-full min-h-[150px] flex items-center gap-x-4">
+    <div className="flex  gap-x-4 py-2 lg:px-6 border-gray-200 w-full font-light  text-gray-500  ">
+      <div className="w-full flex items-center gap-x-4 ">
         {/* {image} */}
         <Link  onClick={handleClose} to={`/product/${id}`}>
           <img className="max-w-[80px]" src={images} alt="" />
