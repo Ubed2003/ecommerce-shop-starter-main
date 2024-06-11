@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa";
 import './style.css'
-
+import image from './img/T-shirt.png'
 
 const Hero = () => {
   const [currenSlide, setCurrentSlide] = useState(0)
@@ -21,7 +21,7 @@ const Hero = () => {
     <section className= ''>
       <div className='relative w-full' >
       <div className=" slider  m-0 p-0  m-0 p-0  duration-500 transition-all w-full ">
-        <img className=" w-full  object-cover " src={data[0]} alt="" />
+        <img src={image} alt="" />
    
        
         </div>
