@@ -53,7 +53,7 @@ const CartItem = ({ item }) => {
                 <IoMdRemove />
               </div>
 
-              {/* {amount} */}
+              {/* {Amount} */}
               <div className="h-full flex justify-center items-center px-2 ">
                 {amount}
               </div>

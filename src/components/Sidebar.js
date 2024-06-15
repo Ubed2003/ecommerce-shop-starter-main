@@ -20,31 +20,31 @@ const Sidebar = () => {
       <div
         className={`${
           isOpen ? "-right-full" : "right-0"
-        } w-full bg-white fixed top-0 h-full shadow-2xl sm:max-w-[100vw] md:max-w-[100vw] lg:max-w-[45vw]   xl:max-w-[45vw]  transition-all duration-300 z-20 px-4 `}
+        } w-full bg-white fixed top-0 h-full shadow-2xl sm:max-w-[100vw] md:max-w-[100vw] lg:max-w-[35vw]   xl:max-w-[35vw]  transition-all duration-300 z-20 px-4 `}
       >
         <div className="flex items-center justify-between py-6  ">
-          <div className="uppercase text-sm font-semibold">
+          <div className="uppercase text-sm font-semibold ">
             Shopping bag({itemAmount})
           </div>
           
           {/* {icon} */}
           <div
             onClick={handleClose}
-            className="cursor-pointer w-8 h-8 flex justify-center items-center  "
+            className=" cursor-pointer w-8 h-8 flex justify-center items-center  "
           >
             <FaLongArrowAltRight className="text-2xl" />
           </div>
         </div>
         
-        <div className=" flex flex-col gap-y-2 h-[300px] overflow-x-hidden      ">
+        <div className="  flex flex-col gap-y-2 h-[400px] overflow-x-hidden   ">
           {cart.map((item) => {
             return <CartItem item={item} key={item.id} />;
           })}
                   </div>
          
         
-        <div className=" flex flex-col gap-y-3 py-4 mt-4  bottom-0  ">
-          <div className=" flex w-full justify-between   ">
+        <div className=" flex flex-col gap-y-3 py-4 mt-4  bottom-0     ">
+          <div className=" flex w-full justify-between  ">
             {/* {total} */}
             <div className="uppercase font-semibold ">
               <span className="mr-2">Total:</span>$
@@ -56,7 +56,7 @@ const Sidebar = () => {
               className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl "
             >
               <FiTrash2 />
-            </div>
+            </div> 
           </div>
   
         </div>
